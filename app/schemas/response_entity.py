@@ -3,7 +3,7 @@ from typing import Generic, TypeVar, Optional
 
 T = TypeVar("T")
 
-class Response(BaseModel, Generic[T]):
+class ResponseModel(BaseModel, Generic[T]):
     code: int
     message: str
     data: Optional[T] = None
