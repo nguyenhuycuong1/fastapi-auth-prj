@@ -6,7 +6,7 @@ from app.schemas.response_entity import ResponseModel
 
 class ResponseMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):
-        if request.url.path.startswith(("/docs","/redoc","/openapi.json")):
+        if request.url.path.startswith(("/docs","/redoc","/openapi.json","/login")):
             return await call_next(request)
         
         try:

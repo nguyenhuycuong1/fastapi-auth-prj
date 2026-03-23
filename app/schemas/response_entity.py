@@ -7,4 +7,3 @@ class ResponseModel(BaseModel, Generic[T]):
     code: int
     message: str
     data: Optional[T] = None
-
